@@ -1,0 +1,16 @@
+#RewriteEngine On
+#RewriteBase /main/
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L] 
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /main/
+RewriteCond $1 !^(index\.php|assets|robots\.txt|css|js)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 index.php/
+</IfModule>
