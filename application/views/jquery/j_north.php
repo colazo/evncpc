@@ -47,7 +47,7 @@
 		</div>
 		<div region="east" split="true" style="background:#C9EDCC;width:200px;">
 				<a>Hi, <strong><?php echo $this->username; ?></strong>!<br/><?php echo anchor('/auth/logout/', 'Logout'); ?>
-					Test<?php echo anchor('/jquery/layout/', 'layout'); ?></a>
+					Test<?php echo anchor('/jquery/layout/', 'layout')."time: ".$this->benchmark->elapsed_time('total_execution_time_start','total_execution_time_end'); ?></a>
 		</div>	
 	</div>
 	</div>
