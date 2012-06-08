@@ -28,5 +28,17 @@
 			<div region="east" split="true" style="width:200px;">sub center</div>
 		</div>
 	</div>
+	<pre>
+	<?php 
+	print_r($j_left);
+	
+	echo "<br />Total Exec Time: " . $this->benchmark->elapsed_time('total_execution_time_start','total_execution_time_end');
+	echo "<br />Base Class Load Time: " . $this->benchmark->elapsed_time('loading_time:_base_classes_start','loading_time:_base_classes_end');
+	$class = $this->router->fetch_class();
+	$method = $this->router->fetch_method();
+	echo "<br />Controller / Method ( {$class} / {$method} ) Exec Time: " . $this->benchmark->elapsed_time('controller_execution_time_( '.$class.' / '.$method.' )_start','controller_execution_time_( '.$class.' / '.$method.' )_end');
+	echo "<br />Total Query Exec Time: " . number_format($this->db->benchmark,4); // this should really be turned into a public method, as I'm querying the var $benchmark directly
+	?>
+	</pre>
 </body>
 </html>

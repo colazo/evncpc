@@ -2,7 +2,41 @@
 
 class mUsers extends CI_Model {
     
-    public function create() {
+	protected function isAuthorized(){
+	    switch ( strtolower( $this->router->class ) ){
+        	case 'pages':
+            	$disallowLoggedOut = array( 'dashboard' );
+            	$disallowLoggedIn = array( 'index' );
+        	break;
+
+        	case 'users':
+            	$disallowLoggedOut = array( 'logout' );
+            	$disallowLoggedIn = array( 'register', 'login' );
+	        break;
+    	}
+
+		if ( $this->session->userdata( 'loggedIn' ) ){       
+        	if ( in_array( $this->router->method, $disallowLoggedIn ) ){
+            	redirect( 'pages/dashboard' );
+        	}
+    	}
+    	else{       
+        	if ( in_array( $this->router->method, $disallowLoggedOut ) ){
+            	redirect( 'pages/index' );
+        	}
+    	}
+	}
+
+    public function checkisloggin( $redirect ) {
+    	if ($redirect =='') $redirect='/auth/login/';
+    	if (!$this->tank_auth->is_logged_in()) {
+    		redirect($redirect);
+    	}else{
+            return $query->row();
+        }
+    }
+	
+	public function create() {
         $data = array(
             'name'  => $this->input->post( 'cName', true ),
             'email' => $this->input->post( 'cEmail', true )
@@ -66,4 +100,14 @@ class mUsers extends CI_Model {
         $this->db->delete( 'users', array( 'id' => $id ) );
     } //end delete
     
+function getj_left_danhmuc() {
+        $query = $this->db->get('j_left_danhmuc');
+        
+        if( $query->num_rows() > 0 ) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+
 } //end class

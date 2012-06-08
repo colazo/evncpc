@@ -5,18 +5,21 @@ class jquery extends CI_Controller {
 	function __construct()
     {
         parent::__construct();       
-			$this->load->library('tank_auth');
+        	// add this to check user is loggin
+        	$this->load->library('tank_auth');
 			$this->load->model( 'mUsers' );
+        	$this->mUsers->checkisloggin();
+        	$this->username = $this->tank_auth->get_username();
+			
         	//$data['user_id']	= $this->tank_auth->get_user_id();
 			//$data['username']	= $this->tank_auth->get_username();
 			//$data['title']	= "Chào mừng đến với chương trình Quản lý kỹ thuật điện - dung059@gmail.com";
-			$this->username = $this->tank_auth->get_username();
     }
 
     public function index()
     {
-    	$data['title']="QHOnline Layout 1";
-    	$this->load->view('contanner',$data);
+   		$data['title']="QHOnline Layout 1";
+   		$this->load->view('contanner',$data);
     }
 
     public function layout()
@@ -29,6 +32,7 @@ class jquery extends CI_Controller {
     	//$this->load->model("Category");
     	//$temp['menu'] = $this->Category->getMenuData();
     	//Kết thúc phần viết thêm
+    	$data['j_left']=$this->mUsers->getj_left_danhmuc();
     	$this->load->view('contanner',$data);
     }
     

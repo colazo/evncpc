@@ -67,5 +67,8 @@
 			<div title="Báo cáo" style="padding:10px">
 				content3
 			</div>
+			<?php 
+			
+			?>
 		</div>
 	</div>

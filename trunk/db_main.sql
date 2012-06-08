@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50521
 File Encoding         : 65001
 
-Date: 2012-05-23 14:07:23
+Date: 2012-06-08 13:58:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -248,9 +248,8 @@ CREATE TABLE `ci_sessions` (
 -- ----------------------------
 -- Records of ci_sessions
 -- ----------------------------
-INSERT INTO ci_sessions VALUES ('29aff6ab8ecea0aae7a3a2208bdf54f9', '127.0.0.1', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', '1337752442', '');
-INSERT INTO ci_sessions VALUES ('6004c677add25b7f59e4abff3fe9e851', '127.0.0.1', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', '1337756674', 0x613A343A7B733A393A22757365725F64617461223B733A303A22223B733A373A22757365725F6964223B733A313A2231223B733A383A22757365726E616D65223B733A343A22726F6F74223B733A363A22737461747573223B733A313A2231223B7D);
-INSERT INTO ci_sessions VALUES ('60fd22f812d2e403cc21ee76e2bb6bbe', '127.0.0.1', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', '1337752510', '');
+INSERT INTO ci_sessions VALUES ('119c3e9c47abed50f21ad9f5ea434b3d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5', '1339136717', '');
+INSERT INTO ci_sessions VALUES ('2e9581086c39f9e465877b04e273818f', '127.0.0.1', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.46 Safari/536.5', '1339138181', '');
 
 -- ----------------------------
 -- Table structure for `countries`
@@ -530,6 +529,28 @@ CREATE TABLE `crud_example` (
 -- ----------------------------
 -- Records of crud_example
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `j_left_danhmuc`
+-- ----------------------------
+DROP TABLE IF EXISTS `j_left_danhmuc`;
+CREATE TABLE `j_left_danhmuc` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `fdanhmuc` varchar(256) NOT NULL DEFAULT 'danh mục XXX',
+  `findex` int(2) NOT NULL DEFAULT '0',
+  `flink` varchar(2048) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of j_left_danhmuc
+-- ----------------------------
+INSERT INTO j_left_danhmuc VALUES ('1', 'Quản lý kỹ thuật', '0', null);
+INSERT INTO j_left_danhmuc VALUES ('2', 'Quản lý thiết bị', '1', null);
+INSERT INTO j_left_danhmuc VALUES ('3', 'Quản lý vật tư', '2', null);
+INSERT INTO j_left_danhmuc VALUES ('4', 'Quản lý hồ sơ', '3', null);
+INSERT INTO j_left_danhmuc VALUES ('5', 'Quản lý sổ sách', '4', null);
+INSERT INTO j_left_danhmuc VALUES ('6', 'Quản lý linh tinh', '5', null);
 
 -- ----------------------------
 -- Table structure for `login_attempts`
@@ -956,9 +977,9 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO users VALUES ('1', 'root', '$2a$08$k2U9X5pRxoUZv7xXPbN7ke2TKfM2wZQw.ys7KKUVpcTWvceWWcl5K', 'dung059@gmail.com', '1', '0', null, null, null, null, '', '127.0.0.1', '2012-05-23 07:01:53', '2012-05-15 04:56:47', '2012-05-23 13:01:53', '1', '', '2012-02-02');
+INSERT INTO users VALUES ('1', 'root', '$2a$08$k2U9X5pRxoUZv7xXPbN7ke2TKfM2wZQw.ys7KKUVpcTWvceWWcl5K', 'dung059@gmail.com', '1', '0', null, null, null, null, '', '127.0.0.1', '2012-06-08 07:26:05', '2012-05-15 04:56:47', '2012-06-08 13:26:05', '1', '', '2012-02-02');
 INSERT INTO users VALUES ('2', 'thedungd5', '$2a$08$k2U9X5pRxoUZv7xXPbN7ke2TKfM2wZQw.ys7KKUVpcTWvceWWcl5K', 'thedungd5@yahoo.com', '1', '0', null, null, null, null, null, '127.0.0.1', '2012-05-16 15:57:42', '0000-00-00 00:00:00', '2012-05-16 21:57:42', '1', 'Occupation', '1899-10-10');
-INSERT INTO users VALUES ('3', 'dung059', '$2a$08$k2U9X5pRxoUZv7xXPbN7ke2TKfM2wZQw.ys7KKUVpcTWvceWWcl5K', 'dung059@yahoo.com', '1', '0', null, null, null, null, null, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2012-05-16 21:57:10', '1', 'Occupation', '0000-00-00');
+INSERT INTO users VALUES ('3', 'dung059', '$2a$08$k2U9X5pRxoUZv7xXPbN7ke2TKfM2wZQw.ys7KKUVpcTWvceWWcl5K', 'dung059@yahoo.com', '1', '0', null, null, null, null, null, '127.0.0.1', '2012-06-08 07:43:45', '0000-00-00 00:00:00', '2012-06-08 13:43:45', '1', 'Occupation', '0000-00-00');
 
 -- ----------------------------
 -- Table structure for `user_autologin`
