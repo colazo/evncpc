@@ -1,0 +1,39 @@
+﻿2.  Nội dung kiểm tra bằng mắt (đảm bảo khoảng cách an toàn hoặc có dụng cụ an toàn):
+•	Máy biến áp T1:
+Các thông số vận hành (Nếu có đồng hồ hoặc dụng cụ đo):
+	UhA = [[1]]        UhB = [[2]]      UhC = [[3]]     	CosP = [[4]] 
+	IhA = [[5]]        IhB = [[6]]      IhC = [[7]]           Io = [[8]]
+	-	Tình trạng vỏ máy:   Rỉ, rét [[9]]             Chảy dầu  [[10]]          Tốt [[11]]
+	-	Mức dầu:               Thiếu  	[[12]]             Đủ           [[13]]
+	-	Hạt hút ẩm:            Tốt     	[[14]]             Xấu          [[15]]
+	-	Sứ đầu vào:            Tốt     	[[16]]             Xấu          [[17]]
+	-	Tiếng kêu:             Nhỏ      [[18]]         Bình thường [[19]]      To, gầm rú     [[20]]
+• Thiết bị đóng cắt cao thế (FCO, cầu dao):
+	- Tình trạng FCO:    Tốt      [[21]]            Xấu          [[22]]
+• Chống sét van :
+	- Tình trạng chống sét:    Tốt      [[23]]            Xấu          [[24]]
+• Cách điện (sứ cách điện, TU, TI):
+	- Tình trạng sứ cách điện:    Bẩn    [[25]]      Nứt, vỡ    [[26]]    Nguyên vẹn      [[27]]
+• Aptomat, cầu dao hạ thế:
+	- Tình trạng vỏ aptomat:    Tốt      [[28]]            Xấu          [[29]]
+	- Tình trạng các đầu cực:    Tốt     [[30]]            Xấu          [[31]]    
+	- Tình trạng vận hành:   Bình thường  [[32]]    Không BT  [[33]]    Hư hỏng    [[34]]
+• Cáp lực:
+	- Tình trạng cáp hạ thế:      Tốt      [[35]]            Xấu          [[36]]
+	- Tình trạng cáp cao thế:    Tốt       [[37]]            Xấu          [[38]]
+• Tình trạng các đầu tiếp xúc, đầu cáp: 
+	- Tình trạng đầu tiếp xúc hạ thế:       Tốt      [[39]]            Xấu           [[40]]
+	- Tình trạng đầu tiếp xúc cao thế:      Tốt      [[41]]            Xấu           [[42]]
+• Hệ thống tiếp đất:
+	- Tình trạng tiếp đất chống sét:      Tốt      [[43]]            Xấu          [[44]]
+	- Tình trạng tiếp đất trung tính:     Tốt      [[45]]            Xấu          [[46]]
+• Hệ thống đo đếm:
+	- Tình trạng nguyên vẹn của hệ thống đo đếm:      
+		Nguyên vẹn      [[47]]            Thay đổi          [[48]]
+	- Công tơ làm việc:    Bình thường    [[49]],    Không BT   [[50]],      Hư hỏng   [[51]]
+• Tủ điện:
+	- Tình trạng tủ điện:      Rỉ, rét      [[52]]                Hư hỏng    [[53]]          Tốt    [[54]]
+• Các kết cấu khác (xà, giá đỡ……) (ghi nội dung cần xử lý nếu có):
+........................................................................................................................................................................
+........................................................................................................................................................................
+........................................................................................................................................................................
